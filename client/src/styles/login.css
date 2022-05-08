@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.loginContainer{
+    width: 100%;
+    background-color: rgb(199, 199, 199);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images//chua-bing-quan-Sg7eWHKrxrA-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.login{
+    min-width: 40%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+.login h1{
+    font-size: 25px;
+  font-weight: 600;
+  color: rgb(1, 50, 32);
+}
+.login input{
+    width: 70%;
+    margin: auto;
+}
+.login button{
+    width: 70%;
+    margin: auto;
+    background-color:rgb(1, 50, 32) ;
+    color: white;
+    border-radius: 3px;
+    height: 20px;
+    border: none;
+    font-weight: 400;
+}
