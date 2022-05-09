@@ -39,12 +39,13 @@ function AdminHome() {
     getalltasks();
   };
 
-  const addUser = async (user) => {
+  const addUser = async () => {
     await axios.post("http://localhost:5000/addAdmin", {
       name: adminnameTmp,
       password: adminpasswordTmp,
       role: "adminviewer",
       email: adminEmail,
+      currentUserRole: user.role,
     });
   };
   return (

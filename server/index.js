@@ -123,13 +123,17 @@ app.get("/getuser/:id",async (req,res)=>{
 
 //delete task by id 
 app.delete("/deletetask/:id",async (req,res)=>{
-    const id = req.params.id;
-    await TaskModel.findByIdAndDelete(id).exec();
-    res.send("task is deleted");
+   
+   
+
+        const id = req.params.id;
+        await TaskModel.findByIdAndDelete(id).exec();
+        res.status(200).send('task deleted successfully');
+    
 })
 
 app.post('/addAdmin',async (req,res)=>{
-    const {name,email,password,role} = req.body;
+    const {currentUserRole,name,email,password,role} = req.body;
     if (role === 'admin'){
 
         const newUser = new UserModel({
@@ -137,11 +141,12 @@ app.post('/addAdmin',async (req,res)=>{
             email,
             password,
             role
+
         })
         await newUser.save();
     }
     else{
-        res.send({message:"you are not an admin"})
+        res.send({message:"you are not an admin that can add admins"})
     }
 
 })
